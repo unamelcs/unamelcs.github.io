@@ -19,7 +19,7 @@
     <link rel="alternative" href="/atom.xml" title="unamelcs 的博客" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="/assets/blogImg/favicon.jpg">
   
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
   <style type="text/css">
@@ -43,7 +43,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="/assets/blogImg/litten.png" class="js-avatar">
+			<img src="/assets/blogImg/avatar.png" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">unamelcs</a></h1>
@@ -103,7 +103,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="/assets/blogImg/litten.png" class="js-avatar">
+				<img src="/assets/blogImg/avatar.png" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">unamelcs</h1>
@@ -155,6 +155,91 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-React-Hooks解析" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/02/22/React-Hooks解析/">&#39;React-Hooks解析&#39;</a>
+    </h1>
+  
+
+        
+        <a href="/2019/02/22/React-Hooks解析/" class="archive-article-date">
+  	<time datetime="2019-02-22T03:52:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="为什么我们要在React中引入Hooks，以及它们将如何帮助你写出超棒的React应用"><a href="#为什么我们要在React中引入Hooks，以及它们将如何帮助你写出超棒的React应用" class="headerlink" title="为什么我们要在React中引入Hooks，以及它们将如何帮助你写出超棒的React应用"></a>为什么我们要在React中引入Hooks，以及它们将如何帮助你写出超棒的React应用</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>Hooks是React v16.7.0-alpha中加入的新特性。它可以让你在class以外使用state和其他React特性。<br>Hooks不会影响你对React的理解 恰恰相反，Hooks为React的这些概念提供了更直接的API。之后你将会看到，有了Hooks，你可以以一种更加强大的方式将props, state, context, refs 和生命周期整合起来。</p>
+<h2 id="动机"><a href="#动机" class="headerlink" title="动机"></a>动机</h2><h3 id="跨组件复用stateful-logic-包含状态的逻辑-十分困难"><a href="#跨组件复用stateful-logic-包含状态的逻辑-十分困难" class="headerlink" title="跨组件复用stateful logic(包含状态的逻辑)十分困难"></a>跨组件复用stateful logic(包含状态的逻辑)十分困难</h3><p>使用Hooks，你可以在将含有state的逻辑从组件中抽象出来，这将可以让这些逻辑容易被测试。同时，Hooks可以帮助你在不重写组件结构的情况下复用这些逻辑。 这样这些逻辑就可以跨组件复用，甚至你可以将他们分享到社区中。</p>
+<h3 id="复杂的组件难以理解"><a href="#复杂的组件难以理解" class="headerlink" title="复杂的组件难以理解"></a>复杂的组件难以理解</h3><p>Hooks允许您根据相关部分(例如设置订阅或获取数据)将一个组件分割成更小的函数，而不是强制基于生命周期方法进行分割。您还可以选择使用一个reducer来管理组件的本地状态，以使其更加可预测。</p>
+<h3 id="不止是用户，机器也对Classes难以理解"><a href="#不止是用户，机器也对Classes难以理解" class="headerlink" title="不止是用户，机器也对Classes难以理解"></a>不止是用户，机器也对Classes难以理解</h3><p>Hooks让你可以在classes之外使用更多React的新特性。</p>
+<h2 id="基本钩子"><a href="#基本钩子" class="headerlink" title="基本钩子"></a>基本钩子</h2><h3 id="useState-状态钩子（State-Hook）"><a href="#useState-状态钩子（State-Hook）" class="headerlink" title="useState 状态钩子（State Hook）"></a>useState 状态钩子（State Hook）</h3><p>用法：<br>    const [state, setState] = useState(initialState);<br>    setState(newState);<br>eg:<br>    const [count, setCount] = useState(initialCount); </p>
+<h3 id="useEffect-副作用钩子（Effect-Hook）"><a href="#useEffect-副作用钩子（Effect-Hook）" class="headerlink" title="useEffect 副作用钩子（Effect Hook）"></a>useEffect 副作用钩子（Effect Hook）</h3><pre><code>useEffect(didUpdate);
+</code></pre><p>当你调用useEffect,就是告诉React在刷新DOM之后运行你的副作用函数。副作用函数在组件中声明，所以可以使用组件的状态（state）和属性（props）。React默认在每一次渲染后运行副作用函数——包括第一次渲染。<br>Tip:<br>获取数据、设置订阅和手动更改 React 组件中的 DOM 都是副作用的例子。如果你熟悉 class 组件中的生命周期方法，你可以把 useEffect Hooks 视作 componentDidMount、componentDidUpdate 和 componentWillUnmount 的结合。</p>
+<p>eg1:<br>    useEffect(() =&gt; {<br>        ChatAPI.subscribeToFriendStatus(props.friend.id, handleStatusChange);<br>        return () =&gt; {<br>          ChatAPI.unsubscribeFromFriendStatus(props.friend.id, handleStatusChange);<br>        };<br>      });<br>eg2:<br>    useEffect(() =&gt; {<br>      document.title = <code>You clicked ${count} times</code>;<br>    }, [count]); // Only re-run the effect if count changes</p>
+<h3 id="useContext"><a href="#useContext" class="headerlink" title="useContext"></a>useContext</h3><pre><code>const context = useContext(Context);
+</code></pre><p>接受上下文对象（从中React.createContext返回的值）并返回当前上下文值，由给定上下文的最近上下文提供程序给出。</p>
+<h2 id="额外的钩子"><a href="#额外的钩子" class="headerlink" title="额外的钩子"></a>额外的钩子</h2><h3 id="useReducer"><a href="#useReducer" class="headerlink" title="useReducer"></a>useReducer</h3><p>useReducer则允许你使用一个reducer来管理一个复杂组件的局部状态（local state）<br>    const [state, dispatch] = useReducer(reducer, initialState);</p>
+<h3 id="useCallback"><a href="#useCallback" class="headerlink" title="useCallback"></a>useCallback</h3><p>略。</p>
+<h3 id="useMemo"><a href="#useMemo" class="headerlink" title="useMemo"></a>useMemo</h3><p>略。</p>
+<h3 id="useRef"><a href="#useRef" class="headerlink" title="useRef"></a>useRef</h3><p>略。</p>
+<h3 id="useImperativeMethods"><a href="#useImperativeMethods" class="headerlink" title="useImperativeMethods"></a>useImperativeMethods</h3><p>略。</p>
+<h3 id="useMutationEffect"><a href="#useMutationEffect" class="headerlink" title="useMutationEffect"></a>useMutationEffect</h3><p>略。</p>
+<h3 id="useLayoutEffect"><a href="#useLayoutEffect" class="headerlink" title="useLayoutEffect"></a>useLayoutEffect</h3><p>略。</p>
+<h2 id="构建你自己的钩子"><a href="#构建你自己的钩子" class="headerlink" title="构建你自己的钩子"></a>构建你自己的钩子</h2><p>钩子只复用状态逻辑而不是状态本身。事实上，每一次调用钩子都会得到一个完全孤立的状态——所以你甚至可以在同一个组件中使用两次相同的自定义钩子。<br>自定义钩子更多的是一个约定而不是特性。如果一个函数的名字以 ”use” 开头并且调用了其他的钩子，我们就称它为自定义钩子。useSomething的命名约定方便语法检查插件找到代码中钩子的错误使用。</p>
+<p>自定义挂钩是一种重用有状态逻辑的机制（例如设置订阅并记住当前值），但每次使用自定义挂钩时，其中的所有状态和效果都是完全隔离的。<br>自定义Hook如何获得隔离状态？每次对Hook的调用都会被隔离状态。因为我们useFriendStatus直接调用，从React的角度来看，我们的组件只是调用useState和useEffect。当我们了解到 较早，我们可以调用useState并useEffect在一个组件很多次，他们将是完全独立的。</p>
+<h2 id="使用Hooks的注意事项"><a href="#使用Hooks的注意事项" class="headerlink" title="使用Hooks的注意事项"></a>使用Hooks的注意事项</h2><h3 id="在React函数的顶层使用Hooks"><a href="#在React函数的顶层使用Hooks" class="headerlink" title="在React函数的顶层使用Hooks"></a>在React函数的顶层使用Hooks</h3><p>不要在循环，条件或嵌套函数中调用Hooks。相反，始终在React函数的顶层使用Hooks。<br>原因：<br>那么React如何知道哪个状态对应哪个useState调用？答案是React依赖于调用Hooks的顺序。</p>
+<h3 id="只在React-Functions中调用Hooks"><a href="#只在React-Functions中调用Hooks" class="headerlink" title="只在React Functions中调用Hooks"></a>只在React Functions中调用Hooks</h3><p>从React功能组件调用Hooks。<br>从自定义挂钩中调用挂钩。</p>
+<h3 id="ESLint-Plugin"><a href="#ESLint-Plugin" class="headerlink" title="ESLint Plugin"></a>ESLint Plugin</h3><p>React官方发布了一个名为的ESLint插件eslint-plugin-react-hooks，强制执行这两个规则。</p>
+<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><p>略。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/02/22/React-Hooks解析/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-reactjs源码分析" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">

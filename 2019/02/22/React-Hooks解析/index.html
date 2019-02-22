@@ -6,20 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: 2019 flag m | unamelcs 的博客</title>
+  <title>&#39;React-Hooks解析&#39; | unamelcs 的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="unamelcs 的博客">
-<meta property="og:url" content="http://yoursite.com/tags/2019-flag-m/index.html">
+  <meta name="description" content="为什么我们要在React中引入Hooks，以及它们将如何帮助你写出超棒的React应用定义Hooks是React v16.7.0-alpha中加入的新特性。它可以让你在class以外使用state和其他React特性。Hooks不会影响你对React的理解 恰恰相反，Hooks为React的这些概念提供了更直接的API。之后你将会看到，有了Hooks，你可以以一种更加强大的方式将props, st">
+<meta property="og:type" content="article">
+<meta property="og:title" content="&#39;React-Hooks解析&#39;">
+<meta property="og:url" content="http://yoursite.com/2019/02/22/React-Hooks解析/index.html">
 <meta property="og:site_name" content="unamelcs 的博客">
+<meta property="og:description" content="为什么我们要在React中引入Hooks，以及它们将如何帮助你写出超棒的React应用定义Hooks是React v16.7.0-alpha中加入的新特性。它可以让你在class以外使用state和其他React特性。Hooks不会影响你对React的理解 恰恰相反，Hooks为React的这些概念提供了更直接的API。之后你将会看到，有了Hooks，你可以以一种更加强大的方式将props, st">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-02-22T03:54:08.632Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="unamelcs 的博客">
+<meta name="twitter:title" content="&#39;React-Hooks解析&#39;">
+<meta name="twitter:description" content="为什么我们要在React中引入Hooks，以及它们将如何帮助你写出超棒的React应用定义Hooks是React v16.7.0-alpha中加入的新特性。它可以让你在class以外使用state和其他React特性。Hooks不会影响你对React的理解 恰恰相反，Hooks为React的这些概念提供了更直接的API。之后你将会看到，有了Hooks，你可以以一种更加强大的方式将props, st">
   
     <link rel="alternative" href="/atom.xml" title="unamelcs 的博客" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="/assets/blogImg/favicon.jpg">
   
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
   <style type="text/css">
@@ -43,7 +47,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="/assets/blogImg/litten.png" class="js-avatar">
+			<img src="/assets/blogImg/avatar.png" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">unamelcs</a></h1>
@@ -103,7 +107,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="/assets/blogImg/litten.png" class="js-avatar">
+				<img src="/assets/blogImg/avatar.png" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">unamelcs</h1>
@@ -154,60 +158,178 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-React-Hooks解析" class="article article-type-post " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/01/08/2019-flag/" class="archive-article-date">
-  	<time datetime="2019-01-08T03:18:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-08</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/01/08/2019-flag/">2019 flag</a>
+    <h1 class="article-title" itemprop="name">
+      &#39;React-Hooks解析&#39;
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">2019 flag m</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        <a href="/2019/02/22/React-Hooks解析/" class="archive-article-date">
+  	<time datetime="2019-02-22T03:52:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="为什么我们要在React中引入Hooks，以及它们将如何帮助你写出超棒的React应用"><a href="#为什么我们要在React中引入Hooks，以及它们将如何帮助你写出超棒的React应用" class="headerlink" title="为什么我们要在React中引入Hooks，以及它们将如何帮助你写出超棒的React应用"></a>为什么我们要在React中引入Hooks，以及它们将如何帮助你写出超棒的React应用</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>Hooks是React v16.7.0-alpha中加入的新特性。它可以让你在class以外使用state和其他React特性。<br>Hooks不会影响你对React的理解 恰恰相反，Hooks为React的这些概念提供了更直接的API。之后你将会看到，有了Hooks，你可以以一种更加强大的方式将props, state, context, refs 和生命周期整合起来。</p>
+<h2 id="动机"><a href="#动机" class="headerlink" title="动机"></a>动机</h2><h3 id="跨组件复用stateful-logic-包含状态的逻辑-十分困难"><a href="#跨组件复用stateful-logic-包含状态的逻辑-十分困难" class="headerlink" title="跨组件复用stateful logic(包含状态的逻辑)十分困难"></a>跨组件复用stateful logic(包含状态的逻辑)十分困难</h3><p>使用Hooks，你可以在将含有state的逻辑从组件中抽象出来，这将可以让这些逻辑容易被测试。同时，Hooks可以帮助你在不重写组件结构的情况下复用这些逻辑。 这样这些逻辑就可以跨组件复用，甚至你可以将他们分享到社区中。</p>
+<h3 id="复杂的组件难以理解"><a href="#复杂的组件难以理解" class="headerlink" title="复杂的组件难以理解"></a>复杂的组件难以理解</h3><p>Hooks允许您根据相关部分(例如设置订阅或获取数据)将一个组件分割成更小的函数，而不是强制基于生命周期方法进行分割。您还可以选择使用一个reducer来管理组件的本地状态，以使其更加可预测。</p>
+<h3 id="不止是用户，机器也对Classes难以理解"><a href="#不止是用户，机器也对Classes难以理解" class="headerlink" title="不止是用户，机器也对Classes难以理解"></a>不止是用户，机器也对Classes难以理解</h3><p>Hooks让你可以在classes之外使用更多React的新特性。</p>
+<h2 id="基本钩子"><a href="#基本钩子" class="headerlink" title="基本钩子"></a>基本钩子</h2><h3 id="useState-状态钩子（State-Hook）"><a href="#useState-状态钩子（State-Hook）" class="headerlink" title="useState 状态钩子（State Hook）"></a>useState 状态钩子（State Hook）</h3><p>用法：<br>    const [state, setState] = useState(initialState);<br>    setState(newState);<br>eg:<br>    const [count, setCount] = useState(initialCount); </p>
+<h3 id="useEffect-副作用钩子（Effect-Hook）"><a href="#useEffect-副作用钩子（Effect-Hook）" class="headerlink" title="useEffect 副作用钩子（Effect Hook）"></a>useEffect 副作用钩子（Effect Hook）</h3><pre><code>useEffect(didUpdate);
+</code></pre><p>当你调用useEffect,就是告诉React在刷新DOM之后运行你的副作用函数。副作用函数在组件中声明，所以可以使用组件的状态（state）和属性（props）。React默认在每一次渲染后运行副作用函数——包括第一次渲染。<br>Tip:<br>获取数据、设置订阅和手动更改 React 组件中的 DOM 都是副作用的例子。如果你熟悉 class 组件中的生命周期方法，你可以把 useEffect Hooks 视作 componentDidMount、componentDidUpdate 和 componentWillUnmount 的结合。</p>
+<p>eg1:<br>    useEffect(() =&gt; {<br>        ChatAPI.subscribeToFriendStatus(props.friend.id, handleStatusChange);<br>        return () =&gt; {<br>          ChatAPI.unsubscribeFromFriendStatus(props.friend.id, handleStatusChange);<br>        };<br>      });<br>eg2:<br>    useEffect(() =&gt; {<br>      document.title = <code>You clicked ${count} times</code>;<br>    }, [count]); // Only re-run the effect if count changes</p>
+<h3 id="useContext"><a href="#useContext" class="headerlink" title="useContext"></a>useContext</h3><pre><code>const context = useContext(Context);
+</code></pre><p>接受上下文对象（从中React.createContext返回的值）并返回当前上下文值，由给定上下文的最近上下文提供程序给出。</p>
+<h2 id="额外的钩子"><a href="#额外的钩子" class="headerlink" title="额外的钩子"></a>额外的钩子</h2><h3 id="useReducer"><a href="#useReducer" class="headerlink" title="useReducer"></a>useReducer</h3><p>useReducer则允许你使用一个reducer来管理一个复杂组件的局部状态（local state）<br>    const [state, dispatch] = useReducer(reducer, initialState);</p>
+<h3 id="useCallback"><a href="#useCallback" class="headerlink" title="useCallback"></a>useCallback</h3><p>略。</p>
+<h3 id="useMemo"><a href="#useMemo" class="headerlink" title="useMemo"></a>useMemo</h3><p>略。</p>
+<h3 id="useRef"><a href="#useRef" class="headerlink" title="useRef"></a>useRef</h3><p>略。</p>
+<h3 id="useImperativeMethods"><a href="#useImperativeMethods" class="headerlink" title="useImperativeMethods"></a>useImperativeMethods</h3><p>略。</p>
+<h3 id="useMutationEffect"><a href="#useMutationEffect" class="headerlink" title="useMutationEffect"></a>useMutationEffect</h3><p>略。</p>
+<h3 id="useLayoutEffect"><a href="#useLayoutEffect" class="headerlink" title="useLayoutEffect"></a>useLayoutEffect</h3><p>略。</p>
+<h2 id="构建你自己的钩子"><a href="#构建你自己的钩子" class="headerlink" title="构建你自己的钩子"></a>构建你自己的钩子</h2><p>钩子只复用状态逻辑而不是状态本身。事实上，每一次调用钩子都会得到一个完全孤立的状态——所以你甚至可以在同一个组件中使用两次相同的自定义钩子。<br>自定义钩子更多的是一个约定而不是特性。如果一个函数的名字以 ”use” 开头并且调用了其他的钩子，我们就称它为自定义钩子。useSomething的命名约定方便语法检查插件找到代码中钩子的错误使用。</p>
+<p>自定义挂钩是一种重用有状态逻辑的机制（例如设置订阅并记住当前值），但每次使用自定义挂钩时，其中的所有状态和效果都是完全隔离的。<br>自定义Hook如何获得隔离状态？每次对Hook的调用都会被隔离状态。因为我们useFriendStatus直接调用，从React的角度来看，我们的组件只是调用useState和useEffect。当我们了解到 较早，我们可以调用useState并useEffect在一个组件很多次，他们将是完全独立的。</p>
+<h2 id="使用Hooks的注意事项"><a href="#使用Hooks的注意事项" class="headerlink" title="使用Hooks的注意事项"></a>使用Hooks的注意事项</h2><h3 id="在React函数的顶层使用Hooks"><a href="#在React函数的顶层使用Hooks" class="headerlink" title="在React函数的顶层使用Hooks"></a>在React函数的顶层使用Hooks</h3><p>不要在循环，条件或嵌套函数中调用Hooks。相反，始终在React函数的顶层使用Hooks。<br>原因：<br>那么React如何知道哪个状态对应哪个useState调用？答案是React依赖于调用Hooks的顺序。</p>
+<h3 id="只在React-Functions中调用Hooks"><a href="#只在React-Functions中调用Hooks" class="headerlink" title="只在React Functions中调用Hooks"></a>只在React Functions中调用Hooks</h3><p>从React功能组件调用Hooks。<br>从自定义挂钩中调用挂钩。</p>
+<h3 id="ESLint-Plugin"><a href="#ESLint-Plugin" class="headerlink" title="ESLint Plugin"></a>ESLint Plugin</h3><p>React官方发布了一个名为的ESLint插件eslint-plugin-react-hooks，强制执行这两个规则。</p>
+<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><p>略。</p>
 
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/02/22/React-Hooks解析/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2018/12/24/reactjs源码分析/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">reactjs源码分析</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -230,9 +352,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
@@ -298,10 +420,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">2019 flag m</a>
-              </li>
             
             <div class="clearfix"></div>
           </ul>
